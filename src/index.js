@@ -8,7 +8,7 @@ import "react-confirm-alert/src/react-confirm-alert.css";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/contact-manager-app">
         <App />
     </BrowserRouter>
   </React.StrictMode>
