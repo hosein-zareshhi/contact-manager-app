@@ -19,7 +19,9 @@ const ViewContact = () => {
                 try {
                     setLoading(true);
                     const {data: contactData} = await getContact(contactId);
-                    const {data: groupData} = await getGroup(contactData.id);
+
+                    const groupId = contactData.group;
+                    const {data: groupData} = await getGroup(groupId);
 
                     setLoading(false);
                     setState({...state, contact: contactData, group: groupData});

@@ -57,7 +57,7 @@ const EditContact = () => {
                 setLoading(false);
 
                 const allContacts = [...contacts];
-                const contactIndex = allContacts.findIndex((c) => c.id === Number(contactId));
+                const contactIndex = allContacts.findIndex((c) => String(c.id) === String(contactId));
                 allContacts[contactIndex] = {...data};
 
                 setContacts(allContacts);
