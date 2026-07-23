@@ -12,12 +12,14 @@ const EditContact = () => {
     const navigate = useNavigate();
 
     const [contact, setContact] = useState({
+        contacts :{
             fullname: "",
             photo: "",
             mobile: "",
             email: "",
             job: "",
             group: "",
+        },
     })
 
     useEffect(() => {
@@ -55,7 +57,7 @@ const EditContact = () => {
                 setLoading(false);
 
                 const allContacts = [...contacts];
-                const contactIndex = allContacts.findIndex((c) => String(c.id) === String(contactId));
+                const contactIndex = allContacts.findIndex((c) => c.id === Number(contactId));
                 allContacts[contactIndex] = {...data};
 
                 setContacts(allContacts);
