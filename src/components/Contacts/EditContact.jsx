@@ -12,14 +12,12 @@ const EditContact = () => {
     const navigate = useNavigate();
 
     const [contact, setContact] = useState({
-        contact: {
             fullname: "",
             photo: "",
             mobile: "",
             email: "",
             job: "",
             group: "",
-        },
     })
 
     useEffect(() => {
